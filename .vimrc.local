@@ -1,0 +1,32 @@
+set mouse=r
+colorscheme molokai
+autocmd VimEnter * set nospell
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight ColorColumn ctermbg=gray
+set colorcolumn=80
+" Set tabs to 2 spaces
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2"
+let g:indent_guides_enable_on_vim_startup = 0
+" noecomplete
+" inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump_impl() : pumvisible() ? neocomplete#close_popup() : "\<CR>"
+" indent, close in terminal senario
+let g:indent_guides_auto_colors = 0
+
+function! ScrollQuarter(move, division)
+    let height=winheight(0)
+
+    if a:move == 'up'
+        let key="^Y"
+    else
+        let key="^E"
+    endif
+
+    execute 'normal! ' . height/a:division . key
+endfunction
+
+nnoremap <silent> <C-u> :call ScrollQuarter('up', 5)<CR>
+nnoremap <silent> <C-d> :call ScrollQuarter('down', 5)<CR>
+"nnoremap <silent> <C-y> :call ScrollQuarter('up', 10)<CR>
+"nnoremap <silent> <C-e> :call ScrollQuarter('down', 10)<CR>
