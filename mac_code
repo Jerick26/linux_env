@@ -1,0 +1,7 @@
+compile with debug info
+
+makefile
+CFLAGS = -I$(IDIR) -std=c++11 -stdlib=libc++ -Wno-c++98-compat -g
+certification:
+http://stackoverflow.com/questions/11504377/gdb-fails-with-unable-to-find-mach-task-port-for-process-id-error
+https://sourceware.org/gdb/wiki/BuildingOnDarwin
