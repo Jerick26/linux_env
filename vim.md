@@ -15,5 +15,7 @@ set background=light or dark
 --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.5/config \
 --enable-perlinterp=yes --enable-luainterp=yes --with-lua-prefix=/export/pingzhiguo/usr/local \
 --enable-gui=gtk2 --enable-cscope=yes --prefix=/export/pingzhiguo/bin
+
 $ make VIMRUNTIMEDIR=/export/pingzhiguo/shared/vim/runtime
+
 $ mv src/vim ~/bin/
