@@ -20,6 +20,7 @@ download: http://www.vim.org/git.php
 ```
 if configure error with "You need to install a terminal library; for example ncurses."
 install ncurses via `sudo apt-get install ncurses-dev`
+
 `$ make VIMRUNTIMEDIR=/export/pingzhiguo/shared/vim/runtime`
 
 `$ mv src/vim ~/bin/`
