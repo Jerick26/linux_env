@@ -24,6 +24,7 @@ cd vim
     --enable-largefile        \
     --enable-gui=no           \
     --with-features=huge      \
+    --with-lua                \
     --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu
 
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
