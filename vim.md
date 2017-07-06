@@ -10,12 +10,12 @@ set background=light or dark
 :colorscheme molokai/desert/peaksea/solarized/koehler/slate/evening/torte/default
 
 ## build and install
+```
 ./configure --with-features=huge --enable-multibyte --enable-rubyinterp=yes \
 --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config \
 --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.5/config \
 --enable-perlinterp=yes --enable-luainterp=yes --with-lua-prefix=/export/pingzhiguo/usr/local \
 --enable-gui=gtk2 --enable-cscope=yes --prefix=/export/pingzhiguo/bin
-
-$ make VIMRUNTIMEDIR=/export/pingzhiguo/shared/vim/runtime
-
-$ mv src/vim ~/bin/
+```
+`$ make VIMRUNTIMEDIR=/export/pingzhiguo/shared/vim/runtime`
+`$ mv src/vim ~/bin/`
