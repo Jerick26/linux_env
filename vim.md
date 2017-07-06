@@ -1,18 +1,15 @@
-2016.12.12
-vimdiff
+## vimdiff
 do, diff obtain
 dp, diff put
 ]c, next diff
 [c, previous diff
 :diffu[pdate], update files modified
 
-2017.1.20
-change vim colorsheme
+## colorsheme
 set background=light or dark
 :colorscheme molokai/desert/peaksea/solarized/koehler/slate/evening/torte/default
 
-2017.3.1
-$ build and install vim
+## build and install
 ./configure --with-features=huge --enable-multibyte --enable-rubyinterp=yes \
 --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config \
 --enable-python3interp=yes --with-python3-config-dir=/usr/lib/python3.5/config \
