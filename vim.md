@@ -18,4 +18,5 @@ set background=light or dark
 --enable-gui=gtk2 --enable-cscope=yes --prefix=/export/pingzhiguo/bin
 ```
 `$ make VIMRUNTIMEDIR=/export/pingzhiguo/shared/vim/runtime`
+
 `$ mv src/vim ~/bin/`
