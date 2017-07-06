@@ -2,7 +2,7 @@
 sudo apt-get remove vim vim-runtime vim-tiny vim-common
 
 # Install dependencies
-sudo apt-get install libncurses5-dev python-dev libperl-dev ruby-dev liblua5.2-dev
+sudo apt-get install ncurses-dev python-dev libperl-dev ruby-dev liblua5.2-dev
 
 # Fix liblua paths
 sudo ln -s /usr/include/lua5.2 /usr/include/lua
