@@ -46,4 +46,6 @@ for i in {1..3}; do echo $i; done;
 for i in $(seq 1 3 10); do echo $i; done
 for ((i=1;i<10;i++)); do echo $i; done;
 
-# 
+## install software on ubuntu
+sudo apt-get install sudo apt-get install
+sudo dpkg -i packagename.deb
