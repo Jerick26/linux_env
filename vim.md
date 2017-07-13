@@ -6,7 +6,7 @@ dp, diff put
 :diffu[pdate], update files modified
 
 ## colorsheme
-set background=light or dark
+set background=light or dark<br/>
 :colorscheme molokai/desert/peaksea/solarized/koehler/slate/evening/torte/default
 
 ## digraphs
@@ -20,8 +20,10 @@ input a digraphs in insert mode<br/>
 ## key map
 map, remap, iremap, inoremap<br/>
 doc: [http://haoxiang.org/2011/09/vim-modes-and-mappin/]<br/>
+```
 :verbose imap <C-k><br/>
 :iremap <C-a> <C-k><br/>
 :inoremap <C-a> <C-k>  # no remap in insert mode<br/>
 :unmap <C-k>   # normal mode<br/>
 :iunmap <C-k>  # insert mode<br/>
+```
