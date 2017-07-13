@@ -21,9 +21,9 @@ input a digraphs in insert mode<br/>
 map, remap, iremap, inoremap<br/>
 doc: [http://haoxiang.org/2011/09/vim-modes-and-mappin/]<br/>
 ```
-:verbose imap <C-k><br/>
-:iremap <C-a> <C-k><br/>
-:inoremap <C-a> <C-k>  # no remap in insert mode<br/>
-:unmap <C-k>   # normal mode<br/>
-:iunmap <C-k>  # insert mode<br/>
+:verbose imap <C-k>
+:iremap <C-a> <C-k>
+:inoremap <C-a> <C-k>  # no remap in insert mode
+:unmap <C-k>   # normal mode
+:iunmap <C-k>  # insert mode
 ```
