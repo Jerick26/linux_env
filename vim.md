@@ -1,9 +1,9 @@
 ## vimdiff
-do, diff obtain
-dp, diff put
-]c, next diff
-[c, previous diff
-:diffu[pdate], update files modified
+do, diff obtain<br/>
+dp, diff put<br/>
+]c, next diff<br/>
+[c, previous diff<br/>
+:diffu[pdate], update files modified<br/>
 
 ## colorsheme
 set background=light or dark<br/>
