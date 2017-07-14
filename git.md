@@ -1,3 +1,8 @@
+## setting
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+$ git config --global core.editor vim
+$ git config --global commit.template ~/.gitmessage.txt
 
 ## use git to update nonmaster branch  2017.1.11
 ; sync latest code and create local branch to remote rb branch
@@ -69,4 +74,5 @@ git pull origin next   ( == git fetch origin; git merge origin/next)
 ## fetch, merge 2016.3.8
 git fetch origin
 git merge origin/an-other-branch
+
 
