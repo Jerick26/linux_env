@@ -5,6 +5,14 @@ $ git config --global user.email johndoe@example.com
 $ git config --global core.editor vim
 $ git config --global commit.template ~/.gitmessage.txt
 ```
+content of .gitmessage.txt
+<p>
+subject line
+
+what happened
+
+[ticket: X]
+<p>
 
 ## use git to update nonmaster branch  2017.1.11
 ```
