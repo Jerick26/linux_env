@@ -6,13 +6,11 @@ $ git config --global core.editor vim
 $ git config --global commit.template ~/.gitmessage.txt
 ```
 content of .gitmessage.txt
-<p>
-subject line
-
-what happened
-
-[ticket: X]
-<p>
+> subject line
+> 
+> what happened
+> 
+> [ticket: X]
 
 ## use git to update nonmaster branch  2017.1.11
 ```
