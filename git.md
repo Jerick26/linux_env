@@ -91,8 +91,8 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 $ git config --global core.editor vim
 $ git config --global commit.template ~/.gitmessage.txt
-$ git config --global http.proxy 'socks5://127.0.0.1:1087'  // set proxy as shadowsocks
-$ git config --global https.proxy 'socks5://127.0.0.1:1087'
+$ git config --global http.proxy 'http://127.0.0.1:1087'  // set proxy as shadowsocks
+$ git config --global https.proxy 'http://127.0.0.1:1087'
 ```
 
 ## how to update nonmaster branch
