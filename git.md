@@ -1,3 +1,17 @@
+* [message](#message-format)
+  * [Allowed `<type>`](#allowed-type)
+  * [Allowed `<scope>`](#allowd-scope)
+  * [Examples](#examples)
+* [setting](#setting)
+* [how to update nonmaster branch](#how-to-update-nonmaster-branch)
+* [apply patch](#apply-patch)
+* [ignore files](#ignore-files)
+* [blame](#blame)
+* [submodule](#submodule)
+* [sync pull](#sync pull)
+* [fetch, merge](#fetch-merge)
+
+
 ## message format
 [Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
 
@@ -9,9 +23,9 @@ content of .gitmessage.txt
 > 
 > &lt;footer>
 
-* Allowed <type>
+* Allowed `<type>`
 feat (feature),  fix (bug fix), docs (documentation), style (formatting, missing semi colons, …), refactor, test (when adding missing tests), chore (maintain)
-* Allowed <scope>
+* Allowed `<scope>`
 Scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
 * Message footer
   * Referencing issues: Closes #123, #245, #992
@@ -74,7 +88,7 @@ $ git config --global http.proxy 'socks5://127.0.0.1:1087'  // set proxy as shad
 $ git config --global https.proxy 'socks5://127.0.0.1:1087'
 ```
 
-## use git to update nonmaster branch  2017.1.11
+## how to update nonmaster branch
 ```
 ; sync latest code and create local branch to remote rb branch
 git fetch
@@ -104,7 +118,7 @@ git log  # check all main module and sub module have been commit
 git push origin lc.rb143.0117:rb-xxx
 ```
 
-## apply patch  2017.1.5
+## apply patch
 ```
 diff -u sa/query_server.ini ~/9-test/query_server.ini > ini.patch
 vi ini.patch   # modify the query.ini path in init.patch
@@ -116,7 +130,7 @@ ll s? [tab tab]# get array: sa/ sb/ ...
 .gitignore<br/>
 .git/info/exclude<br>
 
-## blame  2017.1.3
+## blame
 ```
 git blame, Show what revision and author last modified each line of a file
 git blame filename
@@ -142,7 +156,7 @@ git commit -m"submodule cherry-pick md5_commit_id"
 git push origin local-rb-143:rb-143
 ```
 
-## sync code, pull 2016.12.12
+## sync pull
 ```
 git clone git@git.jd.com:ads-serving/adserver.git
 git submodule update --init --recursive
@@ -152,7 +166,7 @@ git pull origin next:master
 git pull origin next   ( == git fetch origin; git merge origin/next)
 ```
 
-## fetch, merge 2016.3.8
+## fetch, merge
 ```
 git fetch origin
 git merge origin/an-other-branch
