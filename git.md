@@ -1,3 +1,69 @@
+## message format
+[https://gist.github.com/stephenparish/9941e89d80e2bc58a153]
+
+content of .gitmessage.txt
+------
+> &lt;type>(&lt;scope>): &lt;subject> 
+> 
+> &lt;body>
+> 
+> &lt;footer>
+
+* Allowed <type>
+feat (feature),  fix (bug fix), docs (documentation), style (formatting, missing semi colons, …), refactor, test (when adding missing tests), chore (maintain)
+* Allowed <scope>
+Scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
+* Message footer
+  * Referencing issues: Closes #123, #245, #992
+  * Breaking changes: 
+
+examples
+------
+```
+feat($browser): onUrlChange event (popstate/hashchange/polling)
+
+Added new event to $browser:
+- forward popstate event if available
+- forward hashchange event if popstate not available
+- do polling when neither popstate nor hashchange available
+
+Breaks $browser.onHashChange, which was removed (use onUrlChange instead)
+```
+
+```
+fix($compile): couple of unit tests for IE9
+
+Older IEs serialize html uppercased, but IE9 does not...
+Would be better to expect case insensitive, unfortunately jasmine does
+not allow to user regexps for throw expectations.
+
+Closes #392
+Breaks foo.bar api, foo.baz should be used instead
+```
+
+```
+feat(directive): ng:disabled, ng:checked, ng:multiple, ng:readonly, ng:selected
+
+New directives for proper binding these attributes in older browsers (IE).
+Added coresponding description, live examples and e2e tests.
+
+Closes #351
+```
+
+```
+style($location): add couple of missing semi colons
+```
+
+```
+docs(guide): updated fixed docs from Google Docs
+
+Couple of typos fixed:
+- indentation
+- batchLogbatchLog -> batchLog
+- start periodic checking
+- missing brace
+```
+
 ## setting
 ```
 $ git config --global user.name "John Doe"
@@ -7,12 +73,6 @@ $ git config --global commit.template ~/.gitmessage.txt
 $ git config --global http.proxy 'socks5://127.0.0.1:1087'  // set proxy as shadowsocks
 $ git config --global https.proxy 'socks5://127.0.0.1:1087'
 ```
-content of .gitmessage.txt
-> &lt;type>(&lt;scope>): &lt;subject> 
-> 
-> &lt;body>
-> 
-> &lt;footer>
 
 ## use git to update nonmaster branch  2017.1.11
 ```
