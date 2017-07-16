@@ -8,11 +8,11 @@ $ git config --global http.proxy 'socks5://127.0.0.1:1087'  // set proxy as shad
 $ git config --global https.proxy 'socks5://127.0.0.1:1087'
 ```
 content of .gitmessage.txt
-> <type>(<scope>): <subject> 
+> &lt;type>(&lt;scope>): &lt;subject> 
 > 
-> <body>
+> &lt;body>
 > 
-> <footer>
+> &lt;footer>
 
 ## use git to update nonmaster branch  2017.1.11
 ```
