@@ -4,13 +4,15 @@ $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 $ git config --global core.editor vim
 $ git config --global commit.template ~/.gitmessage.txt
+$ git config --global http.proxy 'socks5://127.0.0.1:1087'  // set proxy as shadowsocks
+$ git config --global https.proxy 'socks5://127.0.0.1:1087'
 ```
 content of .gitmessage.txt
-> subject line
+> <type>(<scope>): <subject> 
 > 
-> what happened
+> <body>
 > 
-> [ticket: X]
+> <footer>
 
 ## use git to update nonmaster branch  2017.1.11
 ```
