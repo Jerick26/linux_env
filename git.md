@@ -1,6 +1,6 @@
-* [message](#message-format)
+* [message format](#message-format)
   * [Allowed `<type>`](#allowed-type)
-  * [Allowed `<scope>`](#allowd-scope)
+  * [Allowed `<scope>`](#allowed-scope)
   * [Examples](#examples)
 * [setting](#setting)
 * [how to update nonmaster branch](#how-to-update-nonmaster-branch)
@@ -8,7 +8,7 @@
 * [ignore files](#ignore-files)
 * [blame](#blame)
 * [submodule](#submodule)
-* [sync pull](#sync pull)
+* [sync pull](#sync-pull)
 * [fetch, merge](#fetch-merge)
 
 
@@ -31,7 +31,7 @@ Scope could be anything specifying place of the commit change. For example $loca
   * Referencing issues: Closes #123, #245, #992
   * Breaking changes: 
 
-examples
+Examples
 ------
 ```
 feat($browser): onUrlChange event (popstate/hashchange/polling)
