@@ -1,5 +1,5 @@
 ## message format
-[Commit Message Conventions]: https://gist.github.com/stephenparish/9941e89d80e2bc58a153
+[Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
 
 content of .gitmessage.txt
 ------
