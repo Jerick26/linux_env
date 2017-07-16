@@ -1,4 +1,5 @@
 ## terminal access shadowsocks
+[http://blog.csdn.net/u014015972/article/details/50647019]
 [http://droidyue.com/blog/2016/04/04/set-shadowsocks-proxy-for-terminal/index.html]
 ### on MacOs<br>
 ```
@@ -15,10 +16,16 @@ http_proxy=http://localhost:1087 curl ip.gs
 alias hp="http_proxy=http://localhost:1087"
 hp curl ip.gs
 
-export http_proxy=http://localhost:1087
+export http_proxy=http://localhost:1087 # shadowsocks proxy port
+# if need login, use: http_proxy=http://userName:password@proxyAddress:port
 unset http_proxy
 ```
 ### git proxy
+```
+git config –global http.proxy 'socks5://127.0.0.1:10807'
+git config –global https.proxy 'socks5://127.0.0.1:1087'
+```
+or
 ```
 git clone https://android.googlesource.com/tools/repo --config http.proxy=localhost:1087
 in .bashrc or .bash_profile add `gp=" --config http.proxy=localhost:8123"`
