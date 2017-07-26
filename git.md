@@ -10,6 +10,7 @@
 * [submodule](#submodule)
 * [sync pull](#sync-pull)
 * [fetch, merge](#fetch-merge)
+* [know more about origin, pull, push](#know-more-about-origin-push-pull)
 
 
 ## message format
@@ -177,5 +178,47 @@ git pull origin next   ( == git fetch origin; git merge origin/next)
 ```
 git fetch origin
 git merge origin/an-other-branch
+```
+
+## know more about origin push pull
+```
+git clone https://github/b.git -- a
+cd a
+git remote -v
+#we can see "origin" refers to a fetch repository and a push repository, both  https://github/b.git
+ 
+git remote add hello https://github/d.git
+git remote -v
+#we can see "hello" refers to a fetch repository and a push repository, both https://github/d.git
+ 
+git remote set-url --push hello https://github/c.git
+git remote -v
+#we can see "hello" refers to a push repository https://github/c.git and a fetch repository https://github/d.git
+ 
+git remote add self .
+git remote -v
+#we can see "self" refers to a push repository, ".", and a fetch repository, "." too. It is the current repository itself.
+ 
+#now we are going to create a new branch new_master in b.git by git-push
+git push origin HEAD:refs/heads/new_master
+#equivalent to "git push https://github/b.git HEAD:refs/heads/new_master"
+ 
+#now we are goting to fetch from b.git
+git fetch origin
+#or "git fetch https://github/b.git"
+ 
+#now we are going to push the local master to c.git
+git push hello master:master
+#equivalent to "git push https://github/c.git master:master"
+ 
+git pull hello master
+#it fetches from d.git instead of c.git
+#if we want to pull from c.git
+git pull https://github/c.git master
+#"hello" is not used here since pull through "hello" is only from b.git
+ 
+#now we are going to communicate with the current repository
+git push self HEAD:self_master
+#it creates a new local branch self_master. Equivalent to "git push . HEAD:self_master". The "." or "self" can be replace with the absolute path of the current repository.
 ```
 
