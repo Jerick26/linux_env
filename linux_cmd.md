@@ -1,7 +1,16 @@
 
+* [set bash not to show the vim content after exit](#set_bash_not_to_show_the_vim_content_after_exit)
 * [Terminal color and format](#Terminal_color_and_format)
+* [ack](#ack)
+* [grep](#grep)
+* [find files according to time](#find_files_according_to_time)
+* [time stamp conversion](#time_stamp_conversion)
+* [cscope ctags](#cscope_ctags)
+* [shell for loop](#shell_for_loop)
+* [install software on ubuntu](#install_software_on_ubuntu)
+* [eg. Kill CLOSE_WAIT connections by IP](#eg._Kill_CLOSE_WAIT_connections_by_IP)
 
-# set the bash display to not show the vim text after exit on 2017.1.22
+# set bash not to show the vim content after exit
 User1 is using TERM=xterm, in this case when you exit vim it will clear the terminal.
 User2 is using TERM=vt100, in this case when you exit vim it will not clear the terminal.
 
@@ -9,7 +18,7 @@ User2 is using TERM=vt100, in this case when you exit vim it will not clear the 
 edit ~/.bashrc
 PS1='\[\033[1;32;1m\]\u:\W \t$\[\033[1;37;1m\] '
 
-# ack on 2017.1.10
+# ack
 ack
 ack image_tag --ignore-file=ext:out --ignore-dir=build64_debug
 ack image_tag --ignore-file='match:/tags|cscope.*/' --ignore-dir=build64_release
@@ -17,18 +26,17 @@ ack image_tag --ignore-file='match:/tags|cscope.*/' --ignore-dir=build64_release
 grep
 grep -C 3 "match_pattern" file_name --color=auto
 
-# find files according to time on 2017.1.5
+# find files according to time
 find . -type f -atime +7
 find . -type f -amin -10
 
-# convert linux time stamp to date and inverse on 2017.1.4
-
+# time stamp conversion
 date +%s
 date -d '2017-1-4 17:08' +%s
 date -d @1483520880
 date -d @1483520880 +"%Y-%m-%d %H:%M:%S"
 
-# cscope, ctags on 2016.12.28
+# cscope ctags
 find . -regex ".*\.\(h\|cpp\|cc\)" > cscope.files
 cscope -bkq -i cscope.files
 ctags -L cscope.files
@@ -42,7 +50,7 @@ shortcut
 Ctrl+t    "return the last place
 Ctrl+]    "jump to the tag place
 
-# shell for loop on 2017.2.22
+# shell for loop
 for i in 1 2 3; do echo $i; done;
 for i in {1..3}; do echo $i; done;
 for i in $(seq 1 3 10); do echo $i; done
