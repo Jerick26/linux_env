@@ -62,3 +62,14 @@ sudo dpkg -i packagename.deb
 
 ## eg. Kill CLOSE_WAIT connections by IP
 `$ netstat -anp | grep 192.168.0.100 | grep CLOSE_WAIT | awk '{print $7}' | cut -d \/ -f1 | grep -oE "[[:digit:]]{1,}" | xargs kill`
+or
+```
+$ netstat -anp |\  # print network connections
+grep 192.168.0.100 |\  # established with IP 192.168.0.100
+grep ':80 ' |\  # established on port 80
+grep CLOSE_WAIT |\  #  connections in CLOSE_WAIT state
+awk '{print $7}' |\  #  print the 7th column
+cut -d \/ -f1 |\  #  extract PIDs
+grep -oE "[[:digit:]]{1,}" |\  #  extract PIDs
+xargs kill  #  kill PIDs
+```
