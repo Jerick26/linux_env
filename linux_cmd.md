@@ -1,14 +1,13 @@
-
-* [set bash not to show the vim content after exit](#set_bash_not_to_show_the_vim_content_after_exit)
-* [Terminal color and format](#Terminal_color_and_format)
+* [set bash not to show the vim content after exit](#set-bash-not-to-show-the-vim-content-after-exit)
+* [Terminal color and format](#Terminal-color-and-format)
 * [ack](#ack)
 * [grep](#grep)
-* [find files according to time](#find_files_according_to_time)
-* [time stamp conversion](#time_stamp_conversion)
-* [cscope ctags](#cscope_ctags)
-* [shell for loop](#shell_for_loop)
-* [install software on ubuntu](#install_software_on_ubuntu)
-* [eg. Kill CLOSE_WAIT connections by IP](#eg._Kill_CLOSE_WAIT_connections_by_IP)
+* [find files according to time](#find-files-according-to-time)
+* [time stamp conversion](#time-stamp-conversion)
+* [cscope ctags](#cscope-ctags)
+* [shell for loop](#shell-for-loop)
+* [install software on ubuntu](#install-software-on-ubuntu)
+* [eg. Kill CLOSE_WAIT connections by IP](#eg.-Kill-CLOSE_WAIT-connections-by-IP)
 
 # set bash not to show the vim content after exit
 User1 is using TERM=xterm, in this case when you exit vim it will clear the terminal.
@@ -19,11 +18,10 @@ edit ~/.bashrc
 PS1='\[\033[1;32;1m\]\u:\W \t$\[\033[1;37;1m\] '
 
 # ack
-ack
 ack image_tag --ignore-file=ext:out --ignore-dir=build64_debug
 ack image_tag --ignore-file='match:/tags|cscope.*/' --ignore-dir=build64_release
 
-grep
+# grep
 grep -C 3 "match_pattern" file_name --color=auto
 
 # find files according to time
