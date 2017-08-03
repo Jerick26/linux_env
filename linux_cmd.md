@@ -1,9 +1,11 @@
 
+* [Terminal color and format](#Terminal_color_and_format)
+
 # set the bash display to not show the vim text after exit on 2017.1.22
 User1 is using TERM=xterm, in this case when you exit vim it will clear the terminal.
 User2 is using TERM=vt100, in this case when you exit vim it will not clear the terminal.
 
-# set Linux Terminal command color and format on 2017.1.11
+# Terminal color and format
 edit ~/.bashrc
 PS1='\[\033[1;32;1m\]\u:\W \t$\[\033[1;37;1m\] '
 
@@ -49,3 +51,6 @@ for ((i=1;i<10;i++)); do echo $i; done;
 ## install software on ubuntu
 sudo apt-get install sudo apt-get install
 sudo dpkg -i packagename.deb
+
+## eg. Kill CLOSE_WAIT connections by IP
+`$ netstat -anp | grep 192.168.0.100 | grep CLOSE_WAIT | awk '{print $7}' | cut -d \/ -f1 | grep -oE "[[:digit:]]{1,}" | xargs kill`
