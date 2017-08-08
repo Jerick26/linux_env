@@ -239,6 +239,7 @@ git fetch -p  # -p, --prune After fetching, remove any remote-tracking branches 
 ```
 
 ## create a server git repository
+[ref](https://gist.github.com/toolmantim/569530)
 1. Set up the new bare repo on the server:
 ```
 $ ssh myserver.com
@@ -256,8 +257,6 @@ $ git remote add origin user@myserver.com:/var/git/myapp.git
 $ git push origin master
 ```
 3. Now you can tell your co-conspirators to:
-
-[ref](https://gist.github.com/toolmantim/569530)
 ```
 $ git clone user@myserver.com:/var/git/myapp.git
 # checks the remote repository to see what branches have been added and removed since the last git fetch.
