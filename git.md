@@ -256,6 +256,7 @@ $ git remote add origin user@myserver.com:/var/git/myapp.git
 $ git push origin master
 ```
 3. Now you can tell your co-conspirators to:
+
 [ref](https://gist.github.com/toolmantim/569530)
 ```
 $ git clone user@myserver.com:/var/git/myapp.git
