@@ -223,7 +223,7 @@ git push self HEAD:self_master
 #it creates a new local branch self_master. Equivalent to "git push . HEAD:self_master". The "." or "self" can be replace with the absolute path of the current repository.
 ```
 
-## #how to create a remote branch
+## how to create a remote branch
 ```
 git checkout -b <branch-name>
 git push <remote-name> <branch-name>  # remote-name: origin
