@@ -35,7 +35,8 @@ content of .gitmessage.txt
 * chore (maintain)
 
 #### Allowed `<scope>`
-Scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
+Scope could be anything specifying place of the commit change. 
+For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
 * Message footer
   * Referencing issues: Closes #123, #245, #992
   * Breaking changes: 
@@ -220,7 +221,8 @@ git pull https://github/c.git master
  
 #now we are going to communicate with the current repository
 git push self HEAD:self_master
-#it creates a new local branch self_master. Equivalent to "git push . HEAD:self_master". The "." or "self" can be replace with the absolute path of the current repository.
+#it creates a new local branch self_master. Equivalent to "git push . HEAD:self_master". 
+# The "." or "self" can be replace with the absolute path of the current repository.
 ```
 
 ## how to create a remote branch
