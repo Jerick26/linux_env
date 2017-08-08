@@ -235,4 +235,7 @@ git push -u <remote-name> <local-branch-name>
 # delete a remote branch
 git push origin :the_remote_branch  # or  git push origin --delete the_remote_branch
 git fetch -p  # -p, --prune After fetching, remove any remote-tracking branches which no longer exist on the remote.
+# Supposing that you made a "git init" on your server and created the myapp.git, you should:
+git remote add origin ssh://example.com/var/git/myapp.git
+git push origin master
 ```
