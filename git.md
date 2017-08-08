@@ -11,6 +11,7 @@
 * [sync pull](#sync-pull)
 * [fetch, merge](#fetch-merge)
 * [know more about origin, pull, push](#know-more-about-origin-push-pull)
+* [how to create a remote branch](#how-to-create-a-remote-branch)
 
 
 ## message format
@@ -220,5 +221,14 @@ git pull https://github/c.git master
 #now we are going to communicate with the current repository
 git push self HEAD:self_master
 #it creates a new local branch self_master. Equivalent to "git push . HEAD:self_master". The "." or "self" can be replace with the absolute path of the current repository.
+```
+
+## #how to create a remote branch
+```
+git checkout -b <branch-name>
+git push <remote-name> <branch-name>  # remote-name: origin
+git push <remote-name> <local-branch-name>:<remote-branch-name>
+# if to use :<remote-branch-name> (with the colon), the remote branch will be deleted!
+git push -u <remote-name> <local-branch-name>
 ```
 
