@@ -232,4 +232,5 @@ git push <remote-name> <local-branch-name>:<remote-branch-name>
 git push -u <remote-name> <local-branch-name>
 # delete a remote branch
 git push origin :the_remote_branch  # or  git push origin --delete the_remote_branch
+git fetch -p  # -p, --prune After fetching, remove any remote-tracking branches which no longer exist on the remote.
 ```
