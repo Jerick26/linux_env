@@ -11,7 +11,7 @@
 * [sync pull](#sync-pull)
 * [fetch, merge](#fetch-merge)
 * [know more about origin, pull, push](#know-more-about-origin-push-pull)
-* [how to create a remote branch](#how-to-create-a-remote-branch)
+* [how to create and delete a remote branch](#how-to-create-a-remote-branch)
 
 
 ## message format
@@ -230,5 +230,6 @@ git push <remote-name> <branch-name>  # remote-name: origin
 git push <remote-name> <local-branch-name>:<remote-branch-name>
 # if to use :<remote-branch-name> (with the colon), the remote branch will be deleted!
 git push -u <remote-name> <local-branch-name>
+# delete a remote branch
+git push origin :the_remote_branch  # or  git push origin --delete the_remote_branch
 ```
-
