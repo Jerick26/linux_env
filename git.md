@@ -11,7 +11,8 @@
 * [sync pull](#sync-pull)
 * [fetch, merge](#fetch-merge)
 * [know more about origin, pull, push](#know-more-about-origin-push-pull)
-* [how to create and delete a remote branch](#how-to-create-a-remote-branch)
+* [create and delete a remote branch](#how-to-create-a-remote-branch)
+* [create a server git repository](#create-a-server-git-repository)
 
 
 ## message format
@@ -248,13 +249,13 @@ Initialized empty Git repository in /var/git/myapp.git
 $ exit
 Bye!
 ```
-1. Add the remote repository to your existing local git repo and push:
+2. Add the remote repository to your existing local git repo and push:
 ```
 $ cd ~/Sites/myapp
 $ git remote add origin user@myserver.com:/var/git/myapp.git
 $ git push origin master
 ```
-1. Now you can tell your co-conspirators to:
+3. Now you can tell your co-conspirators to:
 [ref](https://gist.github.com/toolmantim/569530)
 ```
 $ git clone user@myserver.com:/var/git/myapp.git
