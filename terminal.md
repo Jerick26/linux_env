@@ -26,8 +26,15 @@ export https_proxy=”http://127.0.0.1:1087”
 ```
 ### git proxy
 ```
-git config –global http.proxy 'socks5://127.0.0.1:10807'
+git config –global http.proxy 'socks5://127.0.0.1:1087'
 git config –global https.proxy 'socks5://127.0.0.1:1087'
+```
+or `vi .gitconfig`
+```
+[http]                                                                          
+› proxy = http://127.0.0.1:1087                                                 
+[https]                                                                         
+› proxy = http://127.0.0.1:1087
 ```
 or
 ```
