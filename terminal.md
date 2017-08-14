@@ -21,8 +21,8 @@ export http_proxy=http://localhost:1087 # shadowsocks proxy port
 unset http_proxy
 
 in .bash_profile
-export http_proxy=”http://127.0.0.1:1087”
-export https_proxy=”http://127.0.0.1:1087”
+export http_proxy=http://127.0.0.1:1087
+export https_proxy=http://127.0.0.1:1087
 ```
 ### git proxy
 `vi .gitconfig`
