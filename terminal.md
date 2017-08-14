@@ -6,7 +6,7 @@
 brew install polipo
 ln -sfv /usr/local/opt/polipo/*.plist ~/Library/LaunchAgents
 vim /usr/local/opt/polipo/homebrew.mxcl.polipo.plist
-// (add <string>socksParentProxy=localhost:8713</string>)
+// (add <string>socksParentProxy=localhost:1080</string>)
 launchctl unload /usr/local/Cellar/polipo/1.1.1/homebrew.mxcl.polipo.plist
 launchctl load /usr/local/Cellar/polipo/1.1.1/homebrew.mxcl.polipo.plist 
 ```
@@ -19,6 +19,10 @@ hp curl ip.gs
 export http_proxy=http://localhost:1087 # shadowsocks proxy port
 # if need login, use: http_proxy=http://userName:password@proxyAddress:port
 unset http_proxy
+
+in .bash_profile
+export http_proxy=”http://127.0.0.1:1087”
+export https_proxy=”http://127.0.0.1:1087”
 ```
 ### git proxy
 ```
