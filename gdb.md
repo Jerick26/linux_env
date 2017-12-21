@@ -4,7 +4,7 @@
 
 ## gen and debug core file
 ```
-ulimit -c unlimited<br>
+ulimit -c unlimited
 gdb executable_bin core.24888
 bt
 gdb -p 43482(pid)
