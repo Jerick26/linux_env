@@ -18,21 +18,27 @@ edit ~/.bashrc
 PS1='\[\033[1;32;1m\]\u:\W \t$\[\033[1;37;1m\] '
 
 # ack
+```
 ack image_tag --ignore-file=ext:out --ignore-dir=build64_debug
 ack image_tag --ignore-file='match:/tags|cscope.*/' --ignore-dir=build64_release
+```
 
 # grep
 grep -C 3 "match_pattern" file_name --color=auto
 
 # find files according to time
+```
 find . -type f -atime +7
 find . -type f -amin -10
+```
 
 # time stamp conversion
+```
 date +%s
 date -d '2017-1-4 17:08' +%s
 date -d @1483520880
 date -d @1483520880 +"%Y-%m-%d %H:%M:%S"
+```
 
 # cscope ctags
 find . -regex ".*\.\(h\|cpp\|cc\)" > cscope.files
@@ -49,14 +55,18 @@ Ctrl+t    "return the last place
 Ctrl+]    "jump to the tag place
 
 # shell for loop
+```
 for i in 1 2 3; do echo $i; done;
 for i in {1..3}; do echo $i; done;
 for i in $(seq 1 3 10); do echo $i; done
 for ((i=1;i<10;i++)); do echo $i; done;
+```
 
 ## install software on ubuntu
+```
 sudo apt-get install sudo apt-get install
 sudo dpkg -i packagename.deb
+```
 
 ## eg. Kill CLOSE_WAIT connections by IP
 `$ netstat -anp | grep 192.168.0.100 | grep CLOSE_WAIT | awk '{print $7}' | cut -d \/ -f1 | grep -oE "[[:digit:]]{1,}" | xargs kill`
